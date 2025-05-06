@@ -1,4 +1,5 @@
-# MaterialDesing3
+# Material Design 3
+![Texto alternativo](/img/m3.PNG)
 Sistema de diseño de código abierto de Google: [MaterialDesing3](https://m3.material.io/)
 
 ## [Qué es material?](https://m3.material.io/get-started)
@@ -11,7 +12,6 @@ Sistema de diseño de código abierto de Google: [MaterialDesing3](https://m3.ma
 ## Diseño
 
 - ### [Estilos y personalización](https://m3.material.io/styles) 
-
 
     ### Color: 
 

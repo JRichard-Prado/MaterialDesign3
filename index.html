@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marterial Design 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script type="importmap">
         {
           "imports": {
@@ -16,98 +17,284 @@
         import '@material/web/all.js';
         import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
         document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-    </script>
-    <style>
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 16px;
-        }
 
-        form>div md-radio {
-            margin-right: 8px;
-        }
-        a{
-            text-decoration: none; 
-            color: inherit;
-        }
-        section{
-            width: 35vw;
-            display: flex;
-            margin: auto;
-            justify-content: space-around;
-        }
-        h1{
-            text-align: center;
-        }
+    </script>
+    <link rel="stylesheet" href="/m3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+
     </style>
 </head>
 
 <body>
-    <h1 class="md-typescale-display-medium">Hello Material!</h1>
-   
+    <header>
+        <h1 class="md-typescale-display-medium">Hello Material!</h1>
+        <!-- Ejemplo menu M3  -->
+        <section class="menu">
+            <span title="Menus Material Design 3" style="position: relative">
+                <a target="_blank" href="https://material-web.dev/components/button/">
+                    <md-filled-button id="inicio">Material 3</md-filled-button>
+                </a>
+            </span>
+            <span title="Menus Material Design 3" style="position: relative">
+                <md-filled-button id="usage-anchor">Frameworks</md-filled-button>
+                <md-menu id="usage-menu" anchor="usage-anchor">
+                    <md-menu-item>
+                        <a target="_blank" href="https://react.dev/">
+                            <div slot="headline">React</div>
+                        </a>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <a target="_blank" href="https://angular.dev/">
+                            <div slot="headline">Angular</div>
+                        </a>
+                    </md-menu-item>
+                </md-menu>
+            </span>
+            <script type="module">
+                const anchorEl1 = document.body.querySelector('#usage-anchor');
+                const menuEl1 = document.body.querySelector('#usage-menu');
+                anchorEl1.addEventListener('click', () => { menuEl1.open = !menuEl1.open; });
+            </script>
+            <span title="Menus Material Design 3" style="position: relative">
+                <md-filled-button id="usage-anchor-2">Componentes frontend</md-filled-button>
+                <md-menu id="usage-menu-2">
+                    <md-menu-item>
+                        <a target="_blank" href="https://getbootstrap.com/docs/5.0/components/accordion/">
+                            <div slot="headline">Bootstrap</div>
+                        </a>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <a target="_blank" href="https://bulma.io/documentation/components/">
+                            <div slot="headline">Bulma</div>
+                        </a>
+                    </md-menu-item>
+                    <md-menu-item href="https://tailwindui.com/components" target="_blank">
+                            <div slot="headline">Tailwind</div>
+                        
+                    </md-menu-item>
+                </md-menu>
+            </span>
+            <script type="module">
+                const anchorEl = document.body.querySelector('#usage-anchor-2');
+                const menuEl = document.body.querySelector('#usage-menu-2');
+                menuEl.anchorElement = anchorEl;
+                anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
+            </script>
+        </section>
+    </header>
     <section>
-        
-        <span style="position: relative">
-            <a target="_blank" href="https://github.com/material-components/material-web/tree/main/docs/components">
-                <md-filled-button id="inicio">Material 3</md-filled-button>
-            </a>
-               
-        </span>
-        <span style="position: relative">
-            <md-filled-button id="usage-anchor">Frameworks</md-filled-button>
-            <md-menu id="usage-menu" anchor="usage-anchor">
-             
-                <md-menu-item>
-                    <a target="_blank" href="https://react.dev/">
-                        <div slot="headline">React</div>
-                    </a>
-                </md-menu-item>
-                <md-menu-item>
-                    <a target="_blank" href="https://angular.dev/">
-                        <div slot="headline">Angular</div>
-                    </a>
-                </md-menu-item>
-                
-            </md-menu>
-        </span>
-        <script type="module">
-            // This example uses anchor as an ID reference
-            const anchorEl1 = document.body.querySelector('#usage-anchor');
-            const menuEl1 = document.body.querySelector('#usage-menu');
-            anchorEl1.addEventListener('click', () => { menuEl1.open = !menuEl1.open; });
-        
-        </script>
-        <span style="position: relative">
-            <md-filled-button id="usage-anchor-2">Componentes frontend</md-filled-button>
-            <md-menu id="usage-menu-2">
-                <md-menu-item>
-                    <a target="_blank" href="https://getbootstrap.com/docs/5.0/components/accordion/">
-                        <div slot="headline">Bootstrap</div>
-                    </a>
-                </md-menu-item>
-                <md-menu-item>
-                    <a target="_blank" href="https://bulma.io/documentation/components/">
-                        <div slot="headline">Bulma</div>
-                    </a>
-                </md-menu-item>
-                <md-menu-item>
-                    <a target="_blank" href="https://tailwindui.com/components">
-                        <div slot="headline">Tailwind</div>
-                    </a>
-                </md-menu-item>
-            </md-menu>
-        </span>
-        <script type="module">
-            // This example uses MdMenu.prototype.anchorElement to set the anchor as an
-            // HTMLElement reference.
-            const anchorEl = document.body.querySelector('#usage-anchor-2');
-            const menuEl = document.body.querySelector('#usage-menu-2');
-            menuEl.anchorElement = anchorEl;
-            anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
+
+        <!-- ejemplo confirmar dialogo M3 agregar propiedad "open" para mostrar -->
+        <md-dialog open  class="center" type="alert">
+            <div slot="headline">Bienvenido a Material Design 3</div>
+            <form slot="content" id="form-id" method="dialog">
+                Desea iniciar presentacion?
+            </form>
+            <div slot="actions">
+                <md-text-button form="form-id" value="Cancelar">Cancelar</md-text-button>
+                <md-text-button form="form-id" value="Aceptar">Aceptar</md-text-button>
+            </div>
+        </md-dialog>
+        <!-- ejemplo formulario dialogo M3 "open" para mostrar -->
+        <section>
+            <md-filled-button   @click=${showDialog} aria-label="Open a form dialog">
+                Form
+            </md-filled-button>
+<!-- para mostrar el dialogo formulario agregar propiedad 'open' en tag md-dialog-->
+            <md-dialog  aria-label  class="contacts" ?quick=${quick} ?no-focus-trap=${noFocusTrap}>
+                <span slot="headline">
+                    <span class="headline">Crear nuevo contacto</span>
+                    <md-icon-button form="form" value="close" aria-label="Close dialog">
+                        <md-icon>close</md-icon>
+                    </md-icon-button>
+                </span>
+                <form id="form"  slot="content" method="dialog" class="contact-content">
+                    <div class="contact-row">
+                        <md-filled-text-field autofocus label="First Name"></md-filled-text-field>
+                        <md-filled-text-field label="Last Name"></md-filled-text-field>
+                    </div>
+                    <div class="contact-row">
+                        <md-filled-text-field label="Company"></md-filled-text-field>
+                        <md-filled-text-field label="Job Title"></md-filled-text-field>
+                    </div>
+                    <md-filled-text-field label="Email"></md-filled-text-field>
+                    <md-filled-text-field label="Phone"></md-filled-text-field>
+                </form>
+                <div slot="actions">
+                    <md-text-button form="form" value="reset" type="reset">Reset</md-text-button>
+                    <div style="flex: 1"></div>
+                    <md-text-button form="form" value="cancel">Cancel</md-text-button>
+                    <md-text-button form="form" value="save">Save</md-text-button>
+                </div>
+            </md-dialog>
+        </section>
+
+    </section>
+    <!-- *******botones iconos******** -->
+    <section id="botones">
+        <md-fab size="small" touch-target="none" aria-label="Edit">
+            <md-icon slot="icon">edit</md-icon>
+        </md-fab>
+        <md-fab size="small" aria-label="Edit">
+            <md-icon slot="icon">edit</md-icon>
+        </md-fab>
+        <md-fab aria-label="Edit">
+            <md-icon slot="icon">edit</md-icon>
+        </md-fab>
+        <md-fab size="large" aria-label="Edit">
+            <md-icon slot="icon">edit</md-icon>
+        </md-fab>
+    </section>
+    <!-- *******botones flotantes******** -->
+    <section id="checkboxes">
+        <div>
+            <md-icon-button>
+                <md-icon>menu</md-icon>
+            </md-icon-button>
+            <md-filled-icon-button>
+                <md-icon>delete</md-icon>
+            </md-filled-icon-button>
+            <md-filled-tonal-icon-button>
+                <md-icon>check</md-icon>
+            </md-filled-tonal-icon-button>
+            <md-outlined-icon-button href="https://fonts.google.com/icons" target="_blank">
+                <md-icon>check</md-icon>
+            </md-outlined-icon-button>
+        </div>
+        <div>
+            <md-icon-button toggle>
+                <md-icon>close</md-icon>
+                <md-icon slot="selected">check</md-icon>
+            </md-icon-button>
+            <md-filled-icon-button toggle>
+                <md-icon>close</md-icon>
+                <md-icon slot="selected">check</md-icon>
+            </md-filled-icon-button>
+            <md-filled-tonal-icon-button toggle>
+                <md-icon>close</md-icon>
+                <md-icon slot="selected">check</md-icon>
+            </md-filled-tonal-icon-button>
+            <md-outlined-icon-button toggle>
+                <md-icon>close</md-icon>
+                <md-icon slot="selected">check</md-icon>
+            </md-outlined-icon-button>
+        </div>
+    </section>
+    <!-- asdads -->
+    <section id="lista">
+        <md-list style="max-width: 300px">
+            <md-list-item>
+                Lit
+                <svg slot="start" style="height: 24px" viewBox="0 0 160 200">
+                    <path fill="currentColor"
+                        d="m160 80v80l-40-40zm-40 40v80l40-40zm0-80v80l-40-40zm-40 40v80l40-40zm-40-40v80l40-40zm40-40v80l-40-40zm-40 120v80l-40-40zm-40-40v80l40-40z" />
+                </svg>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item>
+                Polymer
+                <md-icon slot="start">polymer</md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item>
+                Angular
+                <svg slot="start" style="height: 24px" viewBox="0 0 250 250">
+                    <polygon points="108,135.4 125,135.4 125,135.4 125,135.4 142,135.4 125,94.5   " />
+                    <path d="M125,30L125,30L125,30L31.9,63.2l14.2,123.1L125,230l0,0l0,0l78.9-43.7l14.2-123.1L125,30z M183.1,182.6h-21.7h0
+                    l-11.7-29.2H125h0h0h-24.7l-11.7,29.2h0H66.9h0L125,52.1l0,0l0,0l0,0l0,0L183.1,182.6L183.1,182.6z" />
+                </svg>
+            </md-list-item>
+        </md-list>
+    </section>
+<!-- ondulaciones Una capa se puede aplicar a un elemento entero o en forma circular. -->
+    <section class="center menu">
+        <style>
+            .container {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                margin: 2rem;
+            }
+        </style>
+        <!-- **************ondulaciones**************-->
+        <div class="container">
+            <md-ripple id="ripple"></md-ripple>
+            <!-- <button id="ripple-control"></button> -->
+        </div>
+        <script>
+            const ripple = document.querySelector('#ripple');
+            const control = document.querySelector('#ripple-control');
+            ripple.attach(control);
         </script>
     </section>
+    <section class="menu">
+        <!-- Note the position: relative style -->
+        <span style="position: relative">
+            <md-filled-button id="usage-submenu-anchor">
+                Menu with Submenus
+            </md-filled-button>
+            <!-- Note the has-overflow attribute -->
+            <md-menu has-overflow id="usage-submenu" anchor="usage-submenu-anchor">
+                <md-sub-menu>
+                    <md-menu-item slot="item">
+                        <div slot="headline">Fruits with A</div>
+                        <!-- Arrow icons are helpful affordances -->
+                        <md-icon slot="end">arrow_right</md-icon>
+                    </md-menu-item>
+                    <!-- Submenu must be slotted into sub-menu's menu slot -->
+                    <md-menu slot="menu">
+                        <md-menu-item>
+                            <div slot="headline">Apricot</div>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <div slot="headline">Avocado</div>
+                        </md-menu-item>
+
+                        <!-- Nest as many as you want and control menu anchoring -->
+                        <md-sub-menu menu-corner="start-end" anchor-corner="start-start">
+                            <md-menu-item slot="item">
+                                <div slot="headline">Apples</div>
+                                <!-- Arrow icons are helpful affordances -->
+                                <md-icon slot="start">
+                                    arrow_left
+                                </md-icon>
+                            </md-menu-item>
+                            <md-menu slot="menu">
+                                <md-menu-item>
+                                    <div slot="headline">Fuji</div>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <div slot="headline" style="white-space: nowrap;">Granny Smith</div>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <div slot="headline" style="white-space: nowrap;">Red Delicious</div>
+                                </md-menu-item>
+                            </md-menu>
+
+                        </md-sub-menu>
+                    </md-menu>
+                </md-sub-menu>
+
+                <md-menu-item>
+                    <div slot="headline">Banana</div>
+                </md-menu-item>
+                <md-menu-item>
+                    <div slot="headline">Cucumber</div>
+                </md-menu-item>
+            </md-menu>
+        </span>
+        <script type="module">
+            const anchorEl3 = document.body.querySelector('#usage-submenu-anchor');
+            const menuEl3 = document.body.querySelector('#usage-submenu');
+            anchorEl3.addEventListener('click', () => { menuEl3.open = !menuEl3.open; });
+        </script>
+    </section>
+    <footer>
+
+    </footer>
 </body>
 
 </html>
