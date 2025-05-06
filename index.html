@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marterial Design 3</title>
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+      </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        form>div md-radio {
+            margin-right: 8px;
+        }
+        a{
+            text-decoration: none; 
+            color: inherit;
+        }
+        section{
+            width: 35vw;
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="md-typescale-display-medium">Hello Material!</h1>
+   
+    <section>
+        
+        <span style="position: relative">
+            <a target="_blank" href="https://github.com/material-components/material-web/tree/main/docs/components">
+                <md-filled-button id="inicio">Material 3</md-filled-button>
+            </a>
+               
+        </span>
+        <span style="position: relative">
+            <md-filled-button id="usage-anchor">Frameworks</md-filled-button>
+            <md-menu id="usage-menu" anchor="usage-anchor">
+             
+                <md-menu-item>
+                    <a target="_blank" href="https://react.dev/">
+                        <div slot="headline">React</div>
+                    </a>
+                </md-menu-item>
+                <md-menu-item>
+                    <a target="_blank" href="https://angular.dev/">
+                        <div slot="headline">Angular</div>
+                    </a>
+                </md-menu-item>
+                
+            </md-menu>
+        </span>
+        <script type="module">
+            // This example uses anchor as an ID reference
+            const anchorEl1 = document.body.querySelector('#usage-anchor');
+            const menuEl1 = document.body.querySelector('#usage-menu');
+            anchorEl1.addEventListener('click', () => { menuEl1.open = !menuEl1.open; });
+        
+        </script>
+        <span style="position: relative">
+            <md-filled-button id="usage-anchor-2">Componentes frontend</md-filled-button>
+            <md-menu id="usage-menu-2">
+                <md-menu-item>
+                    <a target="_blank" href="https://getbootstrap.com/docs/5.0/components/accordion/">
+                        <div slot="headline">Bootstrap</div>
+                    </a>
+                </md-menu-item>
+                <md-menu-item>
+                    <a target="_blank" href="https://bulma.io/documentation/components/">
+                        <div slot="headline">Bulma</div>
+                    </a>
+                </md-menu-item>
+                <md-menu-item>
+                    <a target="_blank" href="https://tailwindui.com/components">
+                        <div slot="headline">Tailwind</div>
+                    </a>
+                </md-menu-item>
+            </md-menu>
+        </span>
+        <script type="module">
+            // This example uses MdMenu.prototype.anchorElement to set the anchor as an
+            // HTMLElement reference.
+            const anchorEl = document.body.querySelector('#usage-anchor-2');
+            const menuEl = document.body.querySelector('#usage-menu-2');
+            menuEl.anchorElement = anchorEl;
+            anchorEl.addEventListener('click', () => { menuEl.open = !menuEl.open; });
+        </script>
+    </section>
+</body>
+
+</html>

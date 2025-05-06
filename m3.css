@@ -1,0 +1,9 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  form > div md-radio {
+    margin-right: 8px;
+  }
