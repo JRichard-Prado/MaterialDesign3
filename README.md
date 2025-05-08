@@ -4,14 +4,31 @@ Sistema de diseño de código abierto de Google: [MaterialDesing3](https://m3.ma
 
 ## [Qué es material?](https://m3.material.io/get-started)
 
->Material Design es un sistema de diseño desarrollado y respaldado por diseñadores y desarrolladores de Google. Material.io incluye una guía detallada de UX e implementaciones de componentes de UI para __Android, Flutter y la web__
+Material Design introdujo un sistema visual coherente basado en el uso de __sombras, animaciones, transiciones__ y una estructura jerárquica que simulaba materiales físicos, como el __papel y la tinta__.
+
+La idea es dar un aspecto más tangible y accesible a las interfaces digitales, como si los elementos de la interfaz fueran objetos reales en un entorno físico.
+
+
+>Material Design es un sistema de diseño desarrollado y respaldado por diseñadores y desarrolladores de Google. Material.io incluye una guía detallada de UX e implementaciones de componentes de UI para __Android, Flutter y la Web__ basados en:
 * __Fundamentos de UX__
 * __Código fuente abierto__
 * __Tutoriales, casos prácticos y noticias__
 
+## Breve historia de Material Design
+El concepto original fue presentado por Google en 2014 como parte de la actualización de la interfaz de usuario para Android Lollipop.
+
+![introcucionMaterial](/img/display.PNG)
+
+Desarrollar un único sistema subyacente que permita una experiencia unificada a través de plataformas y tamaños de dispositivos. Los preceptos móviles son fundamentales, pero el tacto, la voz, el ratón y el teclado son todos métodos de entrada de primera clase.
+
+![principios](/img/principio.PNG)
+- Las superficies y los bordes del material proporcionan señales visuales que están cimentadas en la realidad
+- Los elementos fundacionales del diseño basado en la impresión y tipografía, rejillas, espacio, escala, color y uso de imágenes. Estos elementos hacen mucho más que complacer al ojo
+- 
+
 ## [Uso de material](https://m3.material.io/get-started)
 >En Material.io, el sistema de diseño se organiza en tres partes principales: bases , estilos y componentes .
-* __[Fundamentos y personalización](https://m3.material.io/foundations)__
+* __[Fundamentos](https://m3.material.io/foundations)__
 * __[Estilos](https://m3.material.io/styles)__
 * __[Componentes](https://m3.material.io/components)__
 
