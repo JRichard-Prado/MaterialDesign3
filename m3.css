@@ -5,8 +5,12 @@
 }
 
 header {
-  background-color: #797979;
-  color: white;
+  /* background-color: #797979; */
+background: linear-gradient(circle,  #110e0f, #050404, #800c08);
+background: linear-gradient(217deg, rgba(141, 138, 173, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(79, 115, 168, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(119, 175, 201, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  color: rgb(63, 62, 62);
 }
 footer {
   color: white;
@@ -28,7 +32,7 @@ a {
 }
 
 h1 {
-  text-align: left;
+  text-align: center;
 }
 h4{
   text-align: center;
