@@ -2,7 +2,7 @@
 ![Texto alternativo](/img/m3.PNG)
 Sistema de diseño de código abierto de Google: [MaterialDesing3](https://m3.material.io/)
 
-## [Qué es material?](https://m3.material.io/get-started)
+## [Qué es material?](https://www.youtube.com/watch?v=wt0Jzc9UHNw&list=PLEtcGQaT56ch37mnavd8p5cbnkDvXLGsX)
 
 Material Design introdujo un sistema visual coherente basado en el uso de __sombras, animaciones, transiciones__ y una estructura jerárquica que simulaba materiales físicos, como el __papel y la tinta__.
 
