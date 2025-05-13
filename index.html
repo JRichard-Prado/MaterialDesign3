@@ -26,7 +26,7 @@
 
 <body>
     <header>
-        <h1 class="md-typescale-display-medium">Hello Material!</h1>
+        <h1 class="md-typescale-display-medium">Hello Material 3! </h1>
         <!-- Ejemplo menu M3  -->
         <section class="menu">
             <span title="Menus Material Design 3" style="position: relative">
@@ -82,25 +82,25 @@
         </section>
     </header>
     <section>
-
-        <!-- ejemplo confirmar dialogo M3 agregar propiedad "open" para mostrar -->
-        <md-dialog open  class="center" type="alert">
+        <!-- ejemplo confirmar dialogo M3, agregar propiedad "open" para mostrar -->
+        <!-- <md-dialog open  class="center" type="alert">
             <div slot="headline">Bienvenido a Material Design 3</div>
             <form slot="content" id="form-id" method="dialog">
                 Desea iniciar presentacion?
             </form>
             <div slot="actions">
-                <md-text-button form="form-id" value="Cancelar">Cancelar</md-text-button>
-                <md-text-button form="form-id" value="Aceptar">Aceptar</md-text-button>
+                <md-text-button form="form-id" value="">Cancelar</md-text-button>
+                <md-text-button form="form-id" value="">Aceptar</md-text-button>
             </div>
-        </md-dialog>
+        </md-dialog> -->
         <!-- ejemplo formulario dialogo M3 "open" para mostrar -->
         <section>
-            <md-filled-button   @click=${showDialog} aria-label="Open a form dialog">
-                Form
+            <md-filled-button id="form1" >
+                Formulario
             </md-filled-button>
+         
 <!-- para mostrar el dialogo formulario agregar propiedad 'open' en tag md-dialog-->
-            <md-dialog  aria-label  class="contacts" ?quick=${quick} ?no-focus-trap=${noFocusTrap}>
+            <md-dialog  aria-label="Open a form dialog"  class="contacts"  >
                 <span slot="headline">
                     <span class="headline">Crear nuevo contacto</span>
                     <md-icon-button form="form" value="close" aria-label="Close dialog">
@@ -126,6 +126,21 @@
                     <md-text-button form="form" value="save">Save</md-text-button>
                 </div>
             </md-dialog>
+    <!-- <script>
+        const formButton = document.querySelector('#form1');
+        const dialog = document.querySelector('.contacts');
+        formButton.addEventListener('click', () => {
+            dialog.open = !dialog.open;
+        });
+    </script> -->
+<script>
+    const btn1 =document.querySelector("#form1");
+    const formDialog = document.querySelector(".contacts");
+    // btn1.addEventListener('click',()=>{formDialog.open='open'});
+    function mostrarDialogo() {
+        formDialog.open='open';
+    }
+</script>
         </section>
 
     </section>
@@ -179,7 +194,7 @@
             </md-outlined-icon-button>
         </div>
     </section>
-    <!-- asdads -->
+    <!-- listas  -->
     <section id="lista">
         <md-list style="max-width: 300px">
             <md-list-item>
@@ -290,6 +305,38 @@
             anchorEl3.addEventListener('click', () => { menuEl3.open = !menuEl3.open; });
         </script>
     </section>
+    <!-- menu -->
+     <!-- <div class="figure-wrapper">
+  <figure
+    style="justify-content: center"
+    aria-label="A filled button that says open fixed menu. Interact with the button to open a fixed menu."
+  >
+    <div>
+      <div style="margin: 16px">
+        <md-filled-button id="usage-fixed-anchor">Open fixed menu</md-filled-button>
+      </div>
+      <md-menu positioning="fixed" id="usage-fixed" anchor="usage-fixed-anchor">
+        <md-menu-item>
+          <div slot="headline">Apple</div>
+        </md-menu-item>
+        <md-menu-item>
+          <div slot="headline">Banana</div>
+        </md-menu-item>
+        <md-menu-item>
+          <div slot="headline">Cucumber</div>
+        </md-menu-item>
+      </md-menu>
+    </div>
+    <script type="module">
+      const menu123 = document.body.querySelector("#usage-fixed-anchor");
+      const menuEl = document.body.querySelector("#usage-fixed");
+      menu123.addEventListener("click", () => {
+        menuEl.open = !menuEl.open;
+      });
+    </script>
+  </figure>
+</div> -->
+
     <footer>
 
     </footer>
