@@ -64,7 +64,7 @@ Desarrollar un único sistema subyacente que permita una experiencia unificada a
 [![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/%40material%2Fweb)](https://www.jsdelivr.com/package/npm/@material/web?tab=stats)
 
 `@material/web` is a library of
-[web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)<!-- {.external} -->
+[web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components){:target="_blank"}<!-- {.external} -->
 that helps build beautiful and accessible web applications. It uses
 [Material 3](https://m3.material.io/)<!-- {.external} -->, the latest version of Google's
 open-source design system.
